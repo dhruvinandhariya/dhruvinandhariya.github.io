@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,9 +84,13 @@
                 <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
                     Motivated final-year B.E. student specializing in Information Technology, with hands-on internship experience applying machine learning principles to real-world challenges.
                 </p>
-                <div class="flex justify-center gap-4">
+                <!-- MODIFICATION: Replaced "Get in Touch" with "Download Resume" -->
+                <div class="flex flex-wrap justify-center gap-4">
                     <a href="#projects" class="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">View My Projects</a>
-                    <a href="#contact" class="bg-card border border-border-color text-white font-semibold py-3 px-6 rounded-lg hover:bg-border-color transition-colors">Get In Touch</a>
+                    <!-- NEW: Download Resume Button -->
+                    <a href="./Dhruvin Andharia (1).pdf" download="Dhruvin_Andharia_Resume.pdf" class="bg-card border border-border-color text-white font-semibold py-3 px-6 rounded-lg hover:bg-border-color transition-colors">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
                 </div>
                 <div class="mt-12 flex justify-center gap-6">
                     <!-- IMPORTANT: Replace '#' with your actual LinkedIn profile URL -->
@@ -225,22 +230,21 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32 px-6 bg-card/50">
             <div class="container mx-auto text-center max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 scroll-reveal">Contact</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 scroll-reveal">Get In Touch</h2>
                 <p class="text-lg text-text-secondary mb-8 scroll-reveal">
                     I'm actively seeking new opportunities to learn and contribute. Whether you have a question or just want to connect, my inbox is always open.
                 </p>
-                <!-- MODIFICATION: Replaced "Say Hello" with a LinkedIn button -->
                 <div class="scroll-reveal relative inline-block">
+                    <!-- MODIFICATION: Fixed commented out section and re-enabled Copy Email button -->
                     <div class="flex flex-wrap justify-center gap-4">
-                        <!-- NEW: LinkedIn Button -->
                         <a href="https://www.linkedin.com/in/dhruvin-andhariya-2878351ba/" target="_blank" class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity text-lg inline-block">
                             View LinkedIn
                         </a>
                         <!-- Copy Email Button -->
-                        <!-- <button id="copy-email-btn" class="bg-card border border-border-color text-white font-semibold py-3 px-8 rounded-lg hover:bg-border-color transition-colors text-lg inline-block">
+                        <button id="copy-email-btn" class="bg-card border border-border-color text-white font-semibold py-3 px-8 rounded-lg hover:bg-border-color transition-colors text-lg inline-block">
                             Copy Email
                         </button>
-                    </div> -->
+                    </div>
                     <!-- Feedback message for copy action -->
                     <span id="copy-feedback" class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm bg-secondary text-background font-semibold px-3 py-1 rounded-md opacity-0">Copied!</span>
                 </div>
@@ -283,22 +287,17 @@
             const emailAddress = document.getElementById('email-address').innerText;
             const feedback = document.getElementById('copy-feedback');
 
-            // Create a temporary textarea element to hold the text
             const tempTextArea = document.createElement('textarea');
             tempTextArea.value = emailAddress;
             document.body.appendChild(tempTextArea);
             
-            // Select the text and copy it
             tempTextArea.select();
             document.execCommand('copy');
             
-            // Remove the temporary element
             document.body.removeChild(tempTextArea);
 
-            // Show feedback message
             feedback.classList.remove('opacity-0');
 
-            // Hide feedback message after 2 seconds
             setTimeout(function() {
                 feedback.classList.add('opacity-0');
             }, 2000);
