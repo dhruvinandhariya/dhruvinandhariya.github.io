@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruvin Andharia | AI/ML Developer</title>
+    <title>Dhruvin Andharia | AI/ML Research & Dev</title>
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,6 +56,15 @@
         #copy-feedback {
             transition: opacity 0.3s ease-in-out;
         }
+        /* Pulse animation for current role */
+        @keyframes pulse-subtle {
+            0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+        }
+        .pulse-active {
+            animation: pulse-subtle 2s infinite;
+        }
     </style>
 </head>
 <body class="bg-background text-text-primary font-sans">
@@ -70,7 +79,6 @@
                 <a href="#about" class="hover:text-primary transition-colors">About</a>
                 <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </div>
-            <!-- Mobile Menu Button (optional) -->
         </nav>
     </header>
 
@@ -79,20 +87,18 @@
         <section id="hero" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
             <div class="max-w-3xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Dhruvin Andharia</h1>
-                <h2 class="text-2xl md:text-3xl font-medium text-primary mb-4">AI/ML Developer & Problem Solver</h2>
+                <h2 class="text-2xl md:text-3xl font-medium text-primary mb-4">AI Research & Prototype Developer</h2>
                 <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
-                    Motivated final-year B.E. student specializing in Information Technology, with hands-on internship experience applying machine learning principles to real-world challenges.
+                    Final-year Information Technology student specialized in Generative AI, Computer Vision, and Medical AI. Currently researching multi-modal synthesis at <strong>Icareheal Health Tech</strong>.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#projects" class="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">View My Projects</a>
-                    <a href="./Dhruvin Andharia (1).pdf" download="Dhruvin_Andharia_Resume.pdf" class="bg-card border border-border-color text-white font-semibold py-3 px-6 rounded-lg hover:bg-border-color transition-colors">
+                    <a href="#projects" class="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">View My Research</a>
+                    <a href="E:\my_website\Dhruvin Andharia.pdf" download="E:\my_website\Dhruvin Andharia.pdf" class="bg-card border border-border-color text-white font-semibold py-3 px-6 rounded-lg hover:bg-border-color transition-colors">
                         <i class="fas fa-download mr-2"></i>Download Resume
                     </a>
                 </div>
                 <div class="mt-12 flex justify-center gap-6">
-                    <!-- IMPORTANT: Replace '#' with your actual LinkedIn profile URL -->
                     <a href="https://www.linkedin.com/in/dhruvin-andhariya-2878351ba/" target="_blank" aria-label="LinkedIn" class="text-text-secondary hover:text-primary text-3xl transition-colors"><i class="fab fa-linkedin"></i></a>
-                     <!-- IMPORTANT: Replace '#' with your actual GitHub profile URL -->
                     <a href="https://github.com/dhruvinandhariya" target="_blank" aria-label="Github" class="text-text-secondary hover:text-primary text-3xl transition-colors"><i class="fab fa-github"></i></a>
                 </div>
             </div>
@@ -101,9 +107,68 @@
         <!-- Projects Section -->
         <section id="projects" class="py-20 md:py-32 px-6">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16 scroll-reveal">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    <!-- Project 1: Chatbot -->
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16 scroll-reveal">Featured Research & Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1: Gynecological Screening (New) -->
+                    <a href="https://github.com/dhruvinandhariya/AI-Assisted-Gynecological-Screening" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
+                        <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
+                            <h3 class="text-2xl font-semibold text-secondary mb-3">AI-Assisted Gynecological Screening</h3>
+                            <p class="text-text-secondary mb-6">Medical AI system using <strong>U-Net</strong> architectures for lesion segmentation in Ultrasound and Endoscopy. Integrates clinical symptom scoring with automated PDF report generation.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">TensorFlow</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">U-Net</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Flask</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <div class="text-center text-white">
+                                <i class="fab fa-github text-4xl mb-2"></i>
+                                <p class="font-semibold">Open in GitHub</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2: Gym Pose Correction -->
+                    <a href="https://github.com/dhruvinandhariya/AI-Gym-Pose-Correction-System" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
+                        <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
+                            <h3 class="text-2xl font-semibold text-secondary mb-3">AI Gym Pose Correction System</h3>
+                            <p class="text-text-secondary mb-6">Real-time exercise tracker using Mediapipe and OpenCV. Detects push-ups, squats, and lunges with automated rep counting and live voice feedback for form correction.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Mediapipe</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">OpenCV</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Flask</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <div class="text-center text-white">
+                                <i class="fab fa-github text-4xl mb-2"></i>
+                                <p class="font-semibold">Open in GitHub</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 3: Generative AI Video Project -->
+                    <a href="https://github.com/dhruvinandhariya/Multi-Modal-AI-Video-Synthesis" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
+                        <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
+                            <h3 class="text-2xl font-semibold text-secondary mb-3">Multi-Modal AI Video Synthesis</h3>
+                            <p class="text-text-secondary mb-6">Developing a pipeline for automated video generation using Diffusion models. Integrating image-to-video workflows and AI-driven music generation using <strong>pretty_midi</strong>.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python Diffusers</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">pretty_midi</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Generative AI</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <div class="text-center text-white">
+                                <i class="fab fa-github text-4xl mb-2"></i>
+                                <p class="font-semibold">Open in GitHub</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 4: Chatbot -->
                     <a href="https://github.com/dhruvinandhariya/chatbot" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Intelligent Chatbot with Web Scraping</h3>
@@ -121,108 +186,113 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Project 2: Stock Price -->
+                    
+                    <!-- Project 5: Stock Price -->
                     <a href="https://github.com/dhruvinandhariya/Stock-Price_prediction" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Stock Price Prediction</h3>
-                            <p class="text-text-secondary mb-6">Developed a machine learning model to predict stock prices using historical data, applying data preprocessing, feature engineering, and time series analysis.</p>
+                            <p class="text-text-secondary mb-6">Developed a machine learning model to predict stock prices using historical data, applying data preprocessing and time series analysis.</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">ML</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Time Series</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
                             </div>
                         </div>
                     </a>
-                    <!-- Project 3: Delivery Time -->
+                    
+                    <!-- Project 6: Delivery Time -->
                     <a href="https://github.com/dhruvinandhariya/Delivery-price-time-prediction" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Delivery Time Prediction System</h3>
-                            <p class="text-text-secondary mb-6">Built a web app that predicts delivery time based on distance, traffic, and vehicle type, and provides price estimates in INR and USD.</p>
+                            <p class="text-text-secondary mb-6">Built a web app that predicts delivery time based on distance, traffic, and vehicle type, and provides price estimates.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Flask</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
                             </div>
                         </div>
                     </a>
-                    <!-- Project 4: Car Price -->
+
+                    <!-- Project 7: Car Price -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Car Price Prediction</h3>
-                            <p class="text-text-secondary mb-6">Built a regression model to estimate car prices based on features like brand, model, and mileage using Pandas, NumPy, and Scikit-learn.</p>
+                            <p class="text-text-secondary mb-6">Built a regression model to estimate car prices based on features like brand, model, and mileage using Pandas and Scikit-learn.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Pandas</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">NumPy</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
                             </div>
                         </div>
                     </a>
-                    <!-- Project 5: Healthcare Info Assistant -->
+
+                    <!-- Project 8: Healthcare Info Assistant -->
                     <a href="https://github.com/dhruvinandhariya/Healthcare-Info-Assistant" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Healthcare Info Assistant</h3>
-                            <p class="text-text-secondary mb-6">A Flask app that extracts and displays information about drugs and their related medical procedures from curated datasets, acting as a knowledge assistant.</p>
+                            <p class="text-text-secondary mb-6">A Flask app that extracts and displays information about drugs and medical procedures from curated datasets.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Flask</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span>
+                                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Knowledge AI</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
                             </div>
                         </div>
                     </a>
-                    <!-- Project 6: Voice Assistant -->
+
+                    <!-- Project 9: Voice Assistant -->
                     <a href="https://github.com/dhruvinandhariya/Voice-Assistance-System" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Voice Assistance System</h3>
-                            <p class="text-text-secondary mb-6">Developed a Python-based voice assistant that recognizes speech, processes commands, and performs tasks like opening apps and searching the web.</p>
+                            <p class="text-text-secondary mb-6">Developed a Python-based voice assistant that recognizes speech and processes commands like opening apps and web searches.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">SpeechRecognition</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">pyttsx3</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
                             </div>
                         </div>
                     </a>
-                    <!-- Project 7: Inventory Management System -->
+
+                    <!-- Project 10: Inventory Management -->
                     <a href="https://github.com/dhruvinandhariya/Inventory-management-system-using-python" target="_blank" rel="noopener noreferrer" class="block transform hover:-translate-y-2 transition-transform duration-300 group relative">
                         <div class="bg-card border border-border-color rounded-lg p-8 h-full scroll-reveal">
                             <h3 class="text-2xl font-semibold text-secondary mb-3">Inventory Management System</h3>
-                            <p class="text-text-secondary mb-6">Designed and implemented an inventory management application in Python to track stock levels, manage item entries, and generate reports.</p>
+                            <p class="text-text-secondary mb-6">Designed and implemented an application in Python to track stock levels, manage item entries, and generate reports.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Python</span>
                                 <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">Data Management</span>
                             </div>
                         </div>
-                         <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                                 <i class="fab fa-github text-4xl mb-2"></i>
                                 <p class="font-semibold">Open in GitHub</p>
@@ -240,59 +310,60 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <!-- Experience Column -->
                     <div class="scroll-reveal">
-                        <h3 class="text-2xl font-semibold text-white mb-6">Work Experience</h3>
+                        <h3 class="text-2xl font-semibold text-white mb-6">Professional Experience</h3>
                         <div class="relative border-l-2 border-border-color pl-8 space-y-12">
-                            <!-- Job 1 -->
+                            
+                            <!-- Icareheal Internship -->
                             <div class="relative">
-                                <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-primary"></div>
+                                <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-primary pulse-active"></div>
+                                <h4 class="text-xl font-semibold text-secondary">AI Research & Prototype Development Intern</h4>
+                                <p class="font-medium text-white mb-1">Icareheal Health Tech</p>
+                                <p class="text-sm text-text-secondary mb-2">Jan 2026 - Present</p>
+                                <ul class="list-disc list-inside text-text-secondary space-y-2">
+                                    <li>Leading research on automated video generation pipelines using Python Diffusers.</li>
+                                    <li>Architecting prototypes for multi-modal generation (Image, Video, and Music).</li>
+                                    <li>Utilizing <strong>pretty_midi</strong> for algorithmic music synthesis and synchronization.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Previous Internships -->
+                            <div class="relative">
+                                <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-primary/40"></div>
                                 <h4 class="text-xl font-semibold text-secondary">AI/ML Intern</h4>
                                 <p class="font-medium text-white mb-1">Webmobi 360</p>
                                 <p class="text-sm text-text-secondary mb-2">Jan 2025 - Apr 2025</p>
-                                <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                    <li>Implemented a chatbot using LLM and Langchains.</li>
-                                    <li>Developed, trained, and evaluated models for data generation.</li>
-                                    <li>Used Python libraries like Tensorflow, Pandas, and NumPy.</li>
-                                </ul>
                             </div>
-                            <!-- Job 2 -->
                             <div class="relative">
-                                <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-primary"></div>
+                                <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-primary/40"></div>
                                 <h4 class="text-xl font-semibold text-secondary">ML Intern</h4>
                                 <p class="font-medium text-white mb-1">Cognifyz</p>
                                 <p class="text-sm text-text-secondary mb-2">May 2025 - Jun 2025</p>
-                                <ul class="list-disc list-inside text-text-secondary space-y-1">
-                                    <li>Developed prediction models to help restaurants forecast sales.</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
+
                     <!-- Skills Column -->
                     <div class="scroll-reveal">
-                        <h3 class="text-2xl font-semibold text-white mb-6">Technical Skills</h3>
+                        <h3 class="text-2xl font-semibold text-white mb-6">Technical Arsenal</h3>
                         <div class="space-y-6">
                             <div>
-                                <h4 class="text-lg font-semibold text-secondary mb-3">Languages & Databases</h4>
+                                <h4 class="text-lg font-semibold text-secondary mb-3">AI & Medical Imaging</h4>
                                 <div class="flex flex-wrap gap-3">
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Python</span>
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">MySQL</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">U-Net Architecture</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Mediapipe</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">OpenCV</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Python Diffusers</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">pretty_midi</span>
                                 </div>
                             </div>
-                             <div>
-                                <h4 class="text-lg font-semibold text-secondary mb-3">Libraries & Frameworks</h4>
+                            <div>
+                                <h4 class="text-lg font-semibold text-secondary mb-3">Core ML & Engineering</h4>
                                 <div class="flex flex-wrap gap-3">
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Pandas</span>
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">NumPy</span>
                                     <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Tensorflow</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Pandas/NumPy</span>
                                     <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Scikit-learn</span>
+                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Flask</span>
                                     <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">LangChain</span>
-                                </div>
-                            </div>
-                             <div>
-                                <h4 class="text-lg font-semibold text-secondary mb-3">Certifications</h4>
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Python for Data Science (NPTEL)</span>
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Data Analytics (Deloitte)</span>
-                                    <span class="bg-card border border-border-color text-text-primary px-4 py-2 rounded-lg">Machine Learning 1 (Columbia+)</span>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +377,7 @@
             <div class="container mx-auto text-center max-w-3xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 scroll-reveal">About Me</h2>
                 <p class="text-lg text-text-secondary scroll-reveal">
-                    I am a final-year Bachelor's student in Information Technology at the LDRP Institute of Research and Technology, with a diploma in the same field. I have a solid academic foundation complemented by practical internship experience, and I'm passionate about using my skills in engineering and problem-solving to tackle real-world challenges.
+                    I am a final-year IT student at LDRP-ITR with a deep focus on the intersection of engineering and artificial intelligence. Currently, I am exploring the frontiers of <strong>Generative Media</strong>, <strong>Computer Vision</strong>, and <strong>Medical AI</strong>, building prototypes that automate creative workflows and provide real-time human-centric analysis.
                 </p>
             </div>
         </section>
@@ -314,14 +385,11 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32 px-6 bg-card/50">
             <div class="container mx-auto text-center max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 scroll-reveal">Get In Touch</h2>
-                <p class="text-lg text-text-secondary mb-8 scroll-reveal">
-                    I'm actively seeking new opportunities to learn and contribute. Whether you have a question or just want to connect, my inbox is always open.
-                </p>
-                <div class="scroll-reveal relative inline-block">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 scroll-reveal">Let's Connect</h2>
+                <div class="scroll-reveal relative inline-block mt-8">
                     <div class="flex flex-wrap justify-center gap-4">
                         <a href="https://www.linkedin.com/in/dhruvin-andhariya-2878351ba/" target="_blank" class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity text-lg inline-block">
-                            View LinkedIn
+                            LinkedIn
                         </a>
                         <button id="copy-email-btn" class="bg-card border border-border-color text-white font-semibold py-3 px-8 rounded-lg hover:bg-border-color transition-colors text-lg inline-block">
                             Copy Email
@@ -329,7 +397,7 @@
                     </div>
                     <span id="copy-feedback" class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm bg-secondary text-background font-semibold px-3 py-1 rounded-md opacity-0">Copied!</span>
                 </div>
-                 <div class="mt-20 flex justify-center gap-4 text-text-secondary scroll-reveal">
+                <div class="mt-20 flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-text-secondary scroll-reveal">
                     <p><i class="fas fa-envelope mr-2 text-primary"></i><span id="email-address">dhruvin811andhariya@gmail.com</span></p>
                     <p><i class="fas fa-map-marker-alt mr-2 text-primary"></i> Bhavnagar, Gujarat</p>
                 </div>
@@ -341,47 +409,37 @@
     <!-- Footer -->
     <footer class="bg-card border-t border-border-color py-8">
         <div class="container mx-auto text-center text-text-secondary">
-            <p>&copy; 2025 Dhruvin Andharia. All Rights Reserved.</p>
+            <p>&copy; 2026 Dhruvin Andharia. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for scroll animations -->
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.scroll-reveal').forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-    
-    <!-- JavaScript for Copy to Clipboard functionality -->
-    <script>
-        document.getElementById('copy-email-btn').addEventListener('click', function() {
-            const emailAddress = document.getElementById('email-address').innerText;
+            document.querySelectorAll('.scroll-reveal').forEach(section => observer.observe(section));
+
+            const copyBtn = document.getElementById('copy-email-btn');
+            const emailText = document.getElementById('email-address').innerText;
             const feedback = document.getElementById('copy-feedback');
 
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = emailAddress;
-            document.body.appendChild(tempTextArea);
-            
-            tempTextArea.select();
-            document.execCommand('copy');
-            
-            document.body.removeChild(tempTextArea);
-
-            feedback.classList.remove('opacity-0');
-
-            setTimeout(function() {
-                feedback.classList.add('opacity-0');
-            }, 2000);
+            copyBtn.addEventListener('click', function() {
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = emailText;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                try {
+                    document.execCommand('copy');
+                    feedback.classList.remove('opacity-0');
+                    setTimeout(() => feedback.classList.add('opacity-0'), 2000);
+                } catch (err) {}
+                document.body.removeChild(tempTextArea);
+            });
         });
     </script>
 </body>
